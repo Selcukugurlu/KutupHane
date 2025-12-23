@@ -33,5 +33,17 @@ namespace kutup
             KitapEkleme kitapEkleme = new KitapEkleme();
             kitapEkleme.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            UyeListe uyeListe = new UyeListe();
+            uyeListe.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            KitapListe kitapListe = new KitapListe();
+            kitapListe.ShowDialog();
+        }
     }
 }
