@@ -27,5 +27,11 @@ namespace kutup
             UyeEkleme uyeEkleme = new UyeEkleme();
             uyeEkleme.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KitapEkleme kitapEkleme = new KitapEkleme();
+            kitapEkleme.ShowDialog();
+        }
     }
 }
