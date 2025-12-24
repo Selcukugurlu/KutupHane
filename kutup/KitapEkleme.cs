@@ -12,6 +12,7 @@ namespace kutup
 {
     public partial class KitapEkleme : Form
     {
+        kitapbaglilist kitapListesi = new kitapbaglilist();
         public KitapEkleme()
         {
             InitializeComponent();
@@ -22,6 +23,16 @@ namespace kutup
             this.Close();
         }
 
+        private void ButonKitapEkle_Click(object sender, EventArgs e)
+        {
+            string ad = textKitapAd.Text;
+            string yazar = textKitapYazar.Text;
+            string tur = textKitapTur.Text;
+            int isbn = textKitapIsbn.Text != "" ? int.Parse(textKitapIsbn.Text) : 0;
 
+            Kitap yeniKitap = new Kitap(ad, yazar, tur, isbn);
+            kitapListesi.Ekle(yeniKitap);
+
+        }
     }
 }
